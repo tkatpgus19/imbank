@@ -4,9 +4,9 @@ server:
 spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: ${DB_URL}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    url: "jdbc:mariadb://localhost:3307/imbank?useUnicode=true&characterEncoding=utf8mb4"
+    username: root
+    password: root
     hikari:
       max-lifetime: 177000
   jpa:
@@ -23,7 +23,7 @@ spring:
 
 
 jwt:
-  secret: ${JWT_SECRET}
+  secret: "FLW3cdZkVmyX6uhOvRisarltO+qI4up8zWUyxL5GHEU"
   token:
     refresh-expiration-time: 6_000_000
     access-expiration-time: 6_000_000
